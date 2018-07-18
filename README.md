@@ -5,8 +5,24 @@ JavaRestAssert ExtendReport API Testing - TestNG
 ### 2. Dependencies
 
 - RestAssert
+```$xslt
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>${restassured.version}</version>
+    <scope>test</scope>
+</dependency>
+```
 
 - ExtendReport
+
+```$xslt
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.5</version>
+</dependency>
+```
 
 ### 3. Report for Framework
 

@@ -31,7 +31,6 @@ public class BaseTest {
     public void initSpec() {
         spec = new RequestSpecBuilder()
                 .setBaseUri(baseAPIUrl)
-                //.addFilter((Filter) new AllureRestAssured())
                 .build();
     }
 

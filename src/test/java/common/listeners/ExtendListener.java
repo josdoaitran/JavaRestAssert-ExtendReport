@@ -1,11 +1,13 @@
 package common.listeners;
 import com.relevantcodes.extentreports.LogStatus;
 import common.BaseTest;
+import common.extendReports.ExtentManager;
+import common.extendReports.ExtentTestManager;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import utils.ExtentReports.ExtentManager;
-import utils.ExtentReports.ExtentTestManager;
+//import utils.ExtentReports.ExtentManager;
+//import utils.ExtentReports.ExtentTestManager;
 
 public class ExtendListener extends BaseTest implements ITestListener {
 
@@ -17,7 +19,7 @@ public class ExtendListener extends BaseTest implements ITestListener {
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println("I am in onStart method " + iTestContext.getName());
-        iTestContext.setAttribute("WebDriver", this.driver);
+        //iTestContext.setAttribute("WebDriver", this.driver);
     }
 
     //After ending all tests, below method runs.
@@ -49,15 +51,15 @@ public class ExtendListener extends BaseTest implements ITestListener {
 
         //Get driver from BaseTest and assign to local webdriver variable.
         Object testClass = iTestResult.getInstance();
-        WebDriver webDriver = ((BaseTest) testClass).getDriver();
+        //WebDriver webDriver = ((BaseTest) testClass).getDriver();
 
         //Take base64Screenshot screenshot.
-        String base64Screenshot = "data:image/png;base64,"+((TakesScreenshot)webDriver).
-                getScreenshotAs(OutputType.BASE64);
+        //String base64Screenshot = "data:image/png;base64,"+((TakesScreenshot)webDriver).
+        //        getScreenshotAs(OutputType.BASE64);
 
         //Extentreports log and screenshot operations for failed tests.
-        ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
-                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+        //ExtentTestManager.getTest().log(LogStatus.FAIL,"Test Failed",
+        //        ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
     }
 
     @Override

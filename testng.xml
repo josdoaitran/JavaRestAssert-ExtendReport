@@ -4,7 +4,7 @@
         <listener class-name="common.listeners.ExtentTestNgFormatter" />
     </listeners>
 
-    <parameter name="system.info" value="test.MySystemInfo" />
+    <parameter name="system.info" value="common.MySystemInfo" />
     <parameter name="report.config" value="src/test/resources/extent-config.xml" />
 
     <test name="Test1">
@@ -14,7 +14,7 @@
     </test>
     <test name="Test 2">
         <classes>
-            <class name="tests.getWeatherData" />
+            <class name="tests.GetWeatherData" />
         </classes>
     </test>
 </suite>

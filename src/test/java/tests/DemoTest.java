@@ -14,8 +14,6 @@ import java.util.List;
  * This test class demonstrates on how do we create new nodes under the test
  */
 public class DemoTest {
-
-
     @Test
     public void testMethod() {
         System.out.println("Test Demo");

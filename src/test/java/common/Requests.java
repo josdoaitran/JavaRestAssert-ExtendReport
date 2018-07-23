@@ -87,13 +87,13 @@ public class Requests extends BaseTest{
         Assert.assertEquals(actualValue, expectValue);
     }
 
-    public Response postRequest(String apiUrl, String jsonObjectStr) throws IOException {
+    public Response postRequest(String apiUrl,String contentType, String jsonObjectStr) throws IOException {
         logger.info("Post request to: "+ apiUrl);
         ObjectMapper mapper = new ObjectMapper();
         Map<String, Object> map = new HashMap<String, Object>();
         map = mapper.readValue(jsonObjectStr, new TypeReference<Map<String, String>>(){});
         Response response = given().spec(spec)
-                .contentType("application/json").body(map).post(apiUrl);
+                .contentType(contentType).body(map).post(apiUrl);
         String responseBody = response.getBody().asString();
         return response;
     }

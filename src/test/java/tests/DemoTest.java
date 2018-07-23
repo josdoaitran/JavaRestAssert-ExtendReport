@@ -80,6 +80,8 @@ public class DemoTest {
     public void testEdit(){
         String jsonFile = "/src/test/java/common/jsonData/AuditorSignup.json";
         EditJSON.setValueForKeyInJSON("email","aaaa@aaa.com",sDirPath+jsonFile);
+        String [] dataTest = {"KK","LL"};
+        EditJSON.setValueForArrayKeyInJson("/payload/user/agreements/0/agreementID","com",sDirPath+"/src/test/java/common/jsonData/AuditorSignup.json");
     }
 }
 

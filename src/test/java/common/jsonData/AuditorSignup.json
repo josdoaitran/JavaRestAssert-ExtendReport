@@ -1,0 +1,29 @@
+{
+  "payload": {
+    "user": {
+      "email": "",
+      "hearFrom": "",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "agreements": [
+        {
+          "agreementID": "PP-0",
+          "timeStamp": 1530066611431
+        }
+      ]
+    },
+    "firm": {
+      "name": "",
+      "website": "",
+      "numberOfEmployee": "",
+      "address": {
+        "streetAddress": "",
+        "city": "",
+        "stateProvince": "",
+        "postalCode": "",
+        "country": ""
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ public class GetWeatherData extends Requests{
 
     @Test(description = "Test 2")
     public void testPostWeatherData() throws IOException {
-        Response re = postRequest("/data/3.0/stations?appid=e39b66bad0e2961268c73508c026551b", triggerWeather);
+        Response re = postRequest("/data/3.0/stations?appid=e39b66bad0e2961268c73508c026551b","application/json", triggerWeather);
         System.out.println(re.toString());
         Requests.validateCodeResponse(re, 201);
     }
